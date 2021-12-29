@@ -1,0 +1,17 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.name %>
+</p>
+ 
+<p>
+  <strong>HP:</strong>
+  <%= @card.hp %>
+</p>
+<ul>
+<li><%= link_to 'Edit', edit_card_path(@card) %></li>
+<li><%= link_to 'Back to List', cards_path %></li>
+<li><%= button_to "Destroy", card_path(@card),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
